@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  value: [],
+  value: [1, 23, 333],
 };
 
 export const toDoListSlice = createSlice({
