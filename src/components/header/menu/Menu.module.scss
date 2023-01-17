@@ -1,0 +1,24 @@
+.menu{
+    ul{
+        display: flex;
+        background-color: aqua;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+
+        li{
+            display: flex;
+            margin-left: 30px;
+            border: 1px solid;
+            border-radius: 10px;
+            border-color: grey;
+            cursor: pointer;
+            width: 50px;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+           
+            
+        }
+    }
+}
