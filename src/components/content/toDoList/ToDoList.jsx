@@ -3,6 +3,7 @@ import styles from './ToDoList.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { decrement, increment } from '../../../redux/counterSlice';
 import { addItem, deleteItem } from '../../../redux/toDoListSlice';
+import { EntryField } from './components/EntryField';
 export const ToDoList = () => {
   const count = useSelector(state => state.counter.value);
   const listItems = useSelector(state => state.toDoList.value);
@@ -32,6 +33,7 @@ export const ToDoList = () => {
             })}
           </div>
         </div>
+        <EntryField />
       </div>
     </div>
   );

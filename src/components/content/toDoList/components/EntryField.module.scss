@@ -1,0 +1,16 @@
+.entryField{
+    background-color: goldenrod;
+    width: 100%;
+    display: flex;
+
+    .inputEntryField{
+        height: 30px;
+        width: 450px;
+    }
+
+    .buttonEntryField{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
