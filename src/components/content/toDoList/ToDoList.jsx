@@ -1,7 +1,6 @@
 import styles from './ToDoList.module.scss';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { decrement, increment } from '../../../redux/counterSlice';
 import { addItem, deleteItem } from '../../../redux/toDoListSlice';
 import { EntryField } from './components/EntryField';
 export const ToDoList = () => {
@@ -13,16 +12,6 @@ export const ToDoList = () => {
       <div className={styles.toDoListContent}>
         <div className={styles.name}>toDoList</div>
         <div className={styles.content}>
-          <div>
-            <button aria-label="Increment value" onClick={() => dispatch(increment())}>
-              Increment
-            </button>
-            <span>{count}</span>
-            <button aria-label="Decrement value" onClick={() => dispatch(decrement())}>
-              Decrement
-            </button>
-          </div>
-
           <div>
             {listItems.map(item => {
               return (
