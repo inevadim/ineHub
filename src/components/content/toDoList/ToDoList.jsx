@@ -1,6 +1,7 @@
 import styles from './ToDoList.module.scss';
 
 import { useSelector, useDispatch } from 'react-redux';
+
 import { addItem, deleteItem } from '../../../redux/toDoListSlice';
 import { EntryField } from './components/EntryField';
 export const ToDoList = () => {
@@ -22,6 +23,12 @@ export const ToDoList = () => {
             })}
           </div>
         </div>
+        <button
+          onClick={() => {
+            console.log('123-', listItems);
+          }}>
+          123
+        </button>
         <EntryField />
       </div>
     </div>
