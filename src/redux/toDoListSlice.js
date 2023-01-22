@@ -1,7 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// const initialState = {
+//   value: [{ id: '7', name: '23', checked: true }],
+// };
 const initialState = {
-  value: ['1', '23', '333'],
+  value: ['7', '23'],
 };
 
 export const toDoListSlice = createSlice({
@@ -10,6 +13,7 @@ export const toDoListSlice = createSlice({
   reducers: {
     addItem: (state, action) => {
       state.value.push(action.payload);
+      //   state.value.push({ wid: '7', wname: action.payload, wchecked: true });
       localStorage.setItem('toDoList', JSON.stringify(state.value));
     },
     deleteItem: state => {

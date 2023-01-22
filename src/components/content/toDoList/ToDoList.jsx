@@ -12,8 +12,8 @@ export const ToDoList = () => {
   //       listItems = localStorage.getItem('toDoList');
   //     };
   //   }, []);
-  //   const listItems = useSelector(state => state.toDoList.value);
-  const listItems = JSON.parse(localStorage.getItem('toDoList'));
+  const listItems = useSelector(state => state.toDoList.value);
+  //   const listItems = JSON.parse(localStorage.getItem('toDoList'));
 
   const dispatch = useDispatch();
   return (

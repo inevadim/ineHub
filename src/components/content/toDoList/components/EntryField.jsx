@@ -1,10 +1,10 @@
 import styles from './EntryField.module.scss';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from '../../../../redux/toDoListSlice';
 export const EntryField = () => {
   const [entryFieldValue, setEntryFieldValue] = useState('');
-  //   const listItems = useSelector(state => state.toDoList.value);
+  const listItems = useSelector(state => state.toDoList.value);
   const dispatch = useDispatch();
   const addItems = () => {
     setEntryFieldValue('');
@@ -30,10 +30,9 @@ export const EntryField = () => {
       <div
         className={styles.buttonEntryField}
         onClick={() => {
-          const eee = localStorage.getItem('toDoList');
-          console.log(eee);
+          console.log(listItems);
         }}>
-        qwe
+        qweqwe
       </div>
     </div>
   );
