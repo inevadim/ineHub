@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../../../redux/toDoListSlice';
 export const EntryField = () => {
-  const [entryFieldValue, setEntryFieldValue] = useState('1');
+  const [entryFieldValue, setEntryFieldValue] = useState('');
   //   const listItems = useSelector(state => state.toDoList.value);
   const dispatch = useDispatch();
   const addItems = () => {
@@ -18,6 +18,7 @@ export const EntryField = () => {
           setEntryFieldValue(e.target.value);
         }}
         value={entryFieldValue}
+        placeholder="Write text..."
       />
       <div
         className={styles.buttonEntryField}
