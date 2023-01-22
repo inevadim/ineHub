@@ -5,7 +5,7 @@ const initialState = {
 };
 
 export const toDoListSlice = createSlice({
-  name: 'counter',
+  name: 'toDoList',
   initialState,
   reducers: {
     addItem: (state, action) => {

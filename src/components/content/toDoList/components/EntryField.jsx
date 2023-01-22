@@ -6,7 +6,7 @@ export const EntryField = () => {
   const [entryFieldValue, setEntryFieldValue] = useState('1');
   //   const listItems = useSelector(state => state.toDoList.value);
   const dispatch = useDispatch();
-  const clickConsole = () => {
+  const addItems = () => {
     return dispatch(addItem(entryFieldValue));
   };
   return (
@@ -20,10 +20,9 @@ export const EntryField = () => {
       <div
         className={styles.buttonEntryField}
         onClick={() => {
-          clickConsole();
-          console.log('5', entryFieldValue);
+          addItems();
         }}>
-        Enter - {entryFieldValue}
+        Enter
       </div>
     </div>
   );

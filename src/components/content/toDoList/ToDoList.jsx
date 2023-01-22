@@ -23,12 +23,7 @@ export const ToDoList = () => {
             })}
           </div>
         </div>
-        <button
-          onClick={() => {
-            console.log('123-', listItems);
-          }}>
-          123
-        </button>
+
         <EntryField />
       </div>
     </div>
