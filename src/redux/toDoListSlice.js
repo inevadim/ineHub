@@ -10,6 +10,7 @@ export const toDoListSlice = createSlice({
   reducers: {
     addItem: (state, action) => {
       state.value.push(action.payload);
+      localStorage.setItem('toDoList', JSON.stringify(state.value));
     },
     deleteItem: state => {
       state.value -= 1;

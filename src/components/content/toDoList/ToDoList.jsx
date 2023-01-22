@@ -4,9 +4,17 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { addItem, deleteItem } from '../../../redux/toDoListSlice';
 import { EntryField } from './components/EntryField';
+import { useEffect } from 'react';
+
 export const ToDoList = () => {
-  const count = useSelector(state => state.counter.value);
-  const listItems = useSelector(state => state.toDoList.value);
+  //   useEffect(() => {
+  //     return () => {
+  //       listItems = localStorage.getItem('toDoList');
+  //     };
+  //   }, []);
+  //   const listItems = useSelector(state => state.toDoList.value);
+  const listItems = JSON.parse(localStorage.getItem('toDoList'));
+
   const dispatch = useDispatch();
   return (
     <div className={styles.toDoList}>

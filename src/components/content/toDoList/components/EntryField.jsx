@@ -27,6 +27,14 @@ export const EntryField = () => {
         }}>
         Enter
       </div>
+      <div
+        className={styles.buttonEntryField}
+        onClick={() => {
+          const eee = localStorage.getItem('toDoList');
+          console.log(eee);
+        }}>
+        qwe
+      </div>
     </div>
   );
 };
