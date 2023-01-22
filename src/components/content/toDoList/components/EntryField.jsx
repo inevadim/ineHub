@@ -7,6 +7,7 @@ export const EntryField = () => {
   //   const listItems = useSelector(state => state.toDoList.value);
   const dispatch = useDispatch();
   const addItems = () => {
+    setEntryFieldValue('');
     return dispatch(addItem(entryFieldValue));
   };
   return (
@@ -16,6 +17,7 @@ export const EntryField = () => {
         onChange={e => {
           setEntryFieldValue(e.target.value);
         }}
+        value={entryFieldValue}
       />
       <div
         className={styles.buttonEntryField}
