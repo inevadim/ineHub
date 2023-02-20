@@ -1,21 +1,20 @@
 import styles from './ToDoList.module.scss';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-import { addItem, deleteItem } from '../../../redux/toDoListSlice';
+// import { addItem, deleteItem } from '../../../redux/toDoListSlice';
 import { EntryField } from './components/EntryField';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 export const ToDoList = () => {
   //   useEffect(() => {
-  //     return () => {
-  //       listItems = localStorage.getItem('toDoList');
-  //     };
+  //     listItems = localStorage.getItem('toDoList');
   //   }, []);
+
   const listItems = useSelector(state => state.toDoList.value);
   //   const listItems = JSON.parse(localStorage.getItem('toDoList'));
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   return (
     <div className={styles.toDoList}>
       <div className={styles.toDoListContent}>
@@ -25,7 +24,7 @@ export const ToDoList = () => {
             {listItems.map(item => {
               return (
                 <div className={styles.item} key={item}>
-                  {item}
+                  {item.name}
                 </div>
               );
             })}
