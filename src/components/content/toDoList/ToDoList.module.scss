@@ -18,6 +18,13 @@
         .content{
             background-color: antiquewhite;
             flex: 1;
+
+            .item{
+                color:green;
+            }
+            .itemUnChecked{
+                color:red;
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ export const toDoListSlice = createSlice({
       const arrayObj = {
         id: 54,
         name: action.payload,
-        checked: true,
+        checked: false,
       };
       // const arrayObj = action.payload;
       state.value.push(arrayObj);
@@ -20,9 +20,14 @@ export const toDoListSlice = createSlice({
     deleteItem: state => {
       state.value -= 1;
     },
+    editItem: (state, action) => {
+      console.log('qweqwewqewqe');
+      // let user = users.find(item => item.id == 1);
+      // let user = state.value.find(item => item.id == 1);
+    },
   },
 });
 
-export const { addItem, deleteItem, incrementByAmount } = toDoListSlice.actions;
+export const { addItem, deleteItem, editItem } = toDoListSlice.actions;
 
 export default toDoListSlice.reducer;
