@@ -27,13 +27,13 @@ export const EntryField = () => {
         }}>
         Enter
       </div>
-      <div
+      {/* <div
         className={styles.buttonEntryField}
         onClick={() => {
           console.log(listItems);
         }}>
         qweqwe
-      </div>
+      </div> */}
     </div>
   );
 };

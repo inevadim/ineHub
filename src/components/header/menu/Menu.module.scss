@@ -1,7 +1,7 @@
 .menu{
     ul{
         display: flex;
-        background-color: aqua;
+        // background-color: aqua;
         height: 100px;
         justify-content: center;
         align-items: center;
@@ -13,11 +13,16 @@
             border-radius: 10px;
             border-color: grey;
             cursor: pointer;
-            width: 50px;
+            min-width: 50px;
+            overflow: hidden;
+            padding: 5px;
             height: 30px;
             justify-content: center;
             align-items: center;
-           
+            -webkit-box-shadow: 0px 9px 8px 0px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 0px 9px 8px 0px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 9px 8px 0px rgba(34, 60, 80, 0.2);
+            
             
         }
     }
