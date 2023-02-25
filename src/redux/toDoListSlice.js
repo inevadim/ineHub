@@ -17,8 +17,9 @@ export const toDoListSlice = createSlice({
       state.value.push(arrayObj);
       localStorage.setItem('toDoList', JSON.stringify(state.value));
     },
-    deleteItem: state => {
-      state.value -= 1;
+    deleteItem: (state, action) => {
+      state.value = state.value.filter(item => item.name != action.payload);
+      localStorage.setItem('toDoList', JSON.stringify(state.value));
     },
     editItem: (state, action) => {
       console.log('qweqwewqewqe');

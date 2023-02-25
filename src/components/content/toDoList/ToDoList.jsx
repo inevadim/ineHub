@@ -1,7 +1,7 @@
 import styles from './ToDoList.module.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { editItem } from '../../../redux/toDoListSlice';
+import { deleteItem, editItem } from '../../../redux/toDoListSlice';
 
 // import { addItem, deleteItem } from '../../../redux/toDoListSlice';
 import { EntryField } from './components/EntryField';
@@ -19,6 +19,10 @@ export const ToDoList = () => {
     console.log('nameItem - ', nameItem);
     const listItem = listItems.find(item => item.name == nameItem);
     console.log(listItem);
+  };
+
+  const deleteItems = itemName => {
+    return dispatch(deleteItem(itemName));
   };
 
   const [checketItem, setChecketItem] = useState(false);
@@ -52,6 +56,9 @@ export const ToDoList = () => {
                       editItems(item.name);
                     }}
                   />
+                  <div className={styles.deleteItem} onClick={() => deleteItems(item.name)}>
+                    delete ⛔️
+                  </div>
                 </div>
               );
             })}
