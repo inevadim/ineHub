@@ -1,7 +1,7 @@
 import styles from './EntryField.module.scss';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItem } from '../../../../redux/toDoListSlice';
+import { addItem } from '../../../../../redux/toDoListSlice';
 export const EntryField = () => {
   const [entryFieldValue, setEntryFieldValue] = useState('');
   const listItems = useSelector(state => state.toDoList.value);

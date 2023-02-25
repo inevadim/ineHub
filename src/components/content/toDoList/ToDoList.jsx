@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteItem, editItem } from '../../../redux/toDoListSlice';
 
 // import { addItem, deleteItem } from '../../../redux/toDoListSlice';
-import { EntryField } from './components/EntryField';
+import { EntryField } from './components/entryField/EntryField';
 import { useState } from 'react';
 // import { useEffect } from 'react';
 
