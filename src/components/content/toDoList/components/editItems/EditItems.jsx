@@ -15,7 +15,7 @@ export const EditItems = () => {
 
   return (
     <div className={styles.wrapper} onClick={() => editItems()}>
-      wrapper
+      <div className={styles.editItem}>editItem</div>
     </div>
   );
 };
