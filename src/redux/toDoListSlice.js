@@ -27,9 +27,12 @@ export const toDoListSlice = createSlice({
       // let user = users.find(item => item.id == 1);
       // let user = state.value.find(item => item.id == 1);
     },
+    visibleEdit: state => {
+      state.valueVisibleEdit = !state.valueVisibleEdit;
+    },
   },
 });
 
-export const { addItem, deleteItem, editItem } = toDoListSlice.actions;
+export const { addItem, deleteItem, editItem, visibleEdit } = toDoListSlice.actions;
 
 export default toDoListSlice.reducer;

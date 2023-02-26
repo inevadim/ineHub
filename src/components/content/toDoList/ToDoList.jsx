@@ -1,7 +1,7 @@
 import styles from './ToDoList.module.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteItem, editItem } from '../../../redux/toDoListSlice';
+import { deleteItem, editItem, visibleEdit } from '../../../redux/toDoListSlice';
 
 // import { addItem, deleteItem } from '../../../redux/toDoListSlice';
 import { EntryField } from './components/entryField/EntryField';
@@ -17,12 +17,13 @@ export const ToDoList = () => {
   const itemsEdit = useSelector(state => state.toDoList.valueVisibleEdit);
   const dispatch = useDispatch();
 
-  const [itemEdit, setItemEdit] = useState(true);
+  // const [itemEdit, setItemEdit] = useState(true);
 
   const editItems = nameItem => {
     // return dispatch(editItem());
 
-    console.log('itemEdit - ', itemEdit);
+    console.log('itemEdit - ', itemsEdit);
+    return dispatch(visibleEdit());
     // const listItem = listItems.find(item => item.name == nameItem);
     // console.log(listItem);
   };
