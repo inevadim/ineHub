@@ -6,6 +6,7 @@ import { deleteItem, editItem } from '../../../redux/toDoListSlice';
 // import { addItem, deleteItem } from '../../../redux/toDoListSlice';
 import { EntryField } from './components/entryField/EntryField';
 import { useState } from 'react';
+import { EditItems } from './components/editItems/EditItems';
 // import { useEffect } from 'react';
 
 export const ToDoList = () => {
@@ -13,12 +14,17 @@ export const ToDoList = () => {
   //     listItems = localStorage.getItem('toDoList');
   //   }, []);
   const listItems = useSelector(state => state.toDoList.value);
+  const itemsEdit = useSelector(state => state.toDoList.valueVisibleEdit);
   const dispatch = useDispatch();
+
+  const [itemEdit, setItemEdit] = useState(true);
+
   const editItems = nameItem => {
     // return dispatch(editItem());
-    console.log('nameItem - ', nameItem);
-    const listItem = listItems.find(item => item.name == nameItem);
-    console.log(listItem);
+
+    console.log('itemEdit - ', itemEdit);
+    // const listItem = listItems.find(item => item.name == nameItem);
+    // console.log(listItem);
   };
 
   const deleteItems = itemName => {
@@ -56,6 +62,9 @@ export const ToDoList = () => {
                       editItems(item.name);
                     }}
                   />
+                  <div className={styles.editItem} onClick={() => editItems(item.name)}>
+                    edit
+                  </div>
                   <div className={styles.deleteItem} onClick={() => deleteItems(item.name)}>
                     delete ⛔️
                   </div>
@@ -67,6 +76,7 @@ export const ToDoList = () => {
 
         <EntryField />
       </div>
+      {itemsEdit ? <EditItems /> : ''}
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   value: JSON.parse(localStorage.getItem('toDoList')) || [],
+  valueVisibleEdit: false,
 };
 export const toDoListSlice = createSlice({
   name: 'toDoList',
@@ -18,7 +19,7 @@ export const toDoListSlice = createSlice({
       localStorage.setItem('toDoList', JSON.stringify(state.value));
     },
     deleteItem: (state, action) => {
-      state.value = state.value.filter(item => item.name != action.payload);
+      state.value = state.value.filter(item => item.name !== action.payload);
       localStorage.setItem('toDoList', JSON.stringify(state.value));
     },
     editItem: (state, action) => {
