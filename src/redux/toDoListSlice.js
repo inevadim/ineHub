@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   value: JSON.parse(localStorage.getItem('toDoList')) || [],
   valueVisibleEdit: false,
+  valueEdit: [],
 };
 export const toDoListSlice = createSlice({
   name: 'toDoList',
@@ -27,7 +28,8 @@ export const toDoListSlice = createSlice({
       // let user = users.find(item => item.id == 1);
       // let user = state.value.find(item => item.id == 1);
     },
-    visibleEdit: state => {
+    visibleEdit: (state, action) => {
+      state.valueEdit = action.payload;
       state.valueVisibleEdit = !state.valueVisibleEdit;
     },
   },

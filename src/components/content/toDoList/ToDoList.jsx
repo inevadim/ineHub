@@ -15,6 +15,7 @@ export const ToDoList = () => {
   //   }, []);
   const listItems = useSelector(state => state.toDoList.value);
   const itemsEdit = useSelector(state => state.toDoList.valueVisibleEdit);
+  // const valueEdit = useSelector(state => state.toDoList.valueEdit);
   const dispatch = useDispatch();
 
   // const [itemEdit, setItemEdit] = useState(true);
@@ -23,7 +24,8 @@ export const ToDoList = () => {
     // return dispatch(editItem());
 
     console.log('itemEdit - ', itemsEdit);
-    return dispatch(visibleEdit());
+
+    return dispatch(visibleEdit(nameItem));
     // const listItem = listItems.find(item => item.name == nameItem);
     // console.log(listItem);
   };

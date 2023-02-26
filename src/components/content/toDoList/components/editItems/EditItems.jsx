@@ -4,6 +4,7 @@ import { visibleEdit } from '../../../../../redux/toDoListSlice';
 
 export const EditItems = () => {
   const dispatch = useDispatch();
+  const valueEdit = useSelector(state => state.toDoList.valueEdit);
   const editItems = () => {
     // return dispatch(editItem());
 
@@ -15,7 +16,18 @@ export const EditItems = () => {
 
   return (
     <div className={styles.wrapper} onClick={() => editItems()}>
-      <div className={styles.editItem}>editItem</div>
+      <div
+        className={styles.editItem}
+        onClick={e => {
+          e.stopPropagation();
+        }}>
+        <center>
+          <div>EDIT ITEM</div>
+        </center>
+        <div onClick={() => console.log({ valueEdit })}>
+          Name - {valueEdit} <input placeholder={valueEdit} />
+        </div>
+      </div>
     </div>
   );
 };
