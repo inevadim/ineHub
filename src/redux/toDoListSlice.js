@@ -24,9 +24,20 @@ export const toDoListSlice = createSlice({
       localStorage.setItem('toDoList', JSON.stringify(state.value));
     },
     editItem: (state, action) => {
-      console.log('qweqwewqewqe');
-      // let user = users.find(item => item.id == 1);
-      // let user = state.value.find(item => item.id == 1);
+      // const i = state.value.filter(item => item.name == action.payload);
+      state.value = JSON.parse(localStorage.getItem('toDoList'));
+      console.log('action.payload - ', action.payload.valueEdit);
+      console.log('state.value', state.value);
+      console.log('parse -', JSON.parse(localStorage.getItem('toDoList')));
+      state.value = JSON.parse(localStorage.getItem('toDoList'));
+      let index = state.value.findIndex(e => e.name === action.payload.valueEdit);
+      console.log('index -', index);
+      if (index > -1) {
+        // state.value[index].name = action.payload;
+        state.value[index].name = action.payload.itemNameChange;
+        localStorage.setItem('toDoList', JSON.stringify(state.value));
+      }
+      // console.log('qweqwewqewqe -', i);
     },
     visibleEdit: (state, action) => {
       state.valueEdit = action.payload;
