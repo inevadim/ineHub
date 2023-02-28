@@ -1,7 +1,7 @@
 import styles from './ToDoList.module.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteItem, editItem, visibleEdit } from '../../../redux/toDoListSlice';
+import { deleteItem, editItem, visibleEdit, checkedItem } from '../../../redux/toDoListSlice';
 
 // import { addItem, deleteItem } from '../../../redux/toDoListSlice';
 import { EntryField } from './components/entryField/EntryField';
@@ -15,6 +15,7 @@ export const ToDoList = () => {
   //   }, []);
   const listItems = useSelector(state => state.toDoList.value);
   const itemsEdit = useSelector(state => state.toDoList.valueVisibleEdit);
+  const valueEdit = useSelector(state => state.toDoList.valueEdit);
   // const valueEdit = useSelector(state => state.toDoList.valueEdit);
   const dispatch = useDispatch();
 
@@ -28,6 +29,11 @@ export const ToDoList = () => {
     return dispatch(visibleEdit(nameItem));
     // const listItem = listItems.find(item => item.name == nameItem);
     // console.log(listItem);
+  };
+
+  const checkedItems = name => {
+    console.log('123123-', name);
+    return dispatch(checkedItem(name));
   };
 
   const deleteItems = itemName => {
@@ -57,14 +63,14 @@ export const ToDoList = () => {
             {listItems.map(item => {
               return (
                 <div className={item.checked ? styles.item : styles.itemUnChecked} key={item}>
-                  {item.name}
-                  <input
+                  <div onClick={() => checkedItems(item.name)}>{item.name}</div>
+                  {/* <input
                     type="checkbox"
                     onChange={handleChange}
                     onClick={() => {
                       editItems(item.name);
                     }}
-                  />
+                  /> */}
                   <div className={styles.editItem} onClick={() => editItems(item.name)}>
                     edit
                   </div>
