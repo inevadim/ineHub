@@ -72,10 +72,10 @@ export const ToDoList = () => {
                     }}
                   /> */}
                   <div className={styles.editItem} onClick={() => editItems(item.name)}>
-                    edit
+                    ✏️
                   </div>
                   <div className={styles.deleteItem} onClick={() => deleteItems(item.name)}>
-                    delete ⛔️
+                    ⛔️
                   </div>
                 </div>
               );

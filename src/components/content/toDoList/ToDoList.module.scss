@@ -29,13 +29,31 @@ box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
         .content{
             // background-color: antiquewhite;
             flex: 1;
-            
+            .editItem{
+                margin-left: 10px;
+
+                &:hover{
+                    margin-top: -2px;  
+                    transition: 0.1s;
+                }
+            }
+
+            .deleteItem{
+                &:hover{
+                    margin-top: -2px;  
+                    transition: 0.1s;
+                }
+            }
+
             .item{
                 color:green;
                 display: flex;
+                cursor: pointer;
             }
             .itemUnChecked{
-                color:red;
+                // color:red;
+                cursor: pointer;
+                text-decoration: line-through;
                 display: flex;
             }
 
