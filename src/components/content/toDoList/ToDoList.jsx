@@ -1,11 +1,11 @@
 import styles from './ToDoList.module.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteItem, editItem, visibleEdit, checkedItem } from '../../../redux/toDoListSlice';
+import { deleteItem, visibleEdit, checkedItem } from '../../../redux/toDoListSlice';
 
 // import { addItem, deleteItem } from '../../../redux/toDoListSlice';
 import { EntryField } from './components/entryField/EntryField';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { EditItems } from './components/editItems/EditItems';
 // import { useEffect } from 'react';
 
@@ -15,7 +15,7 @@ export const ToDoList = () => {
   //   }, []);
   const listItems = useSelector(state => state.toDoList.value);
   const itemsEdit = useSelector(state => state.toDoList.valueVisibleEdit);
-  const valueEdit = useSelector(state => state.toDoList.valueEdit);
+  // const valueEdit = useSelector(state => state.toDoList.valueEdit);
   // const valueEdit = useSelector(state => state.toDoList.valueEdit);
   const dispatch = useDispatch();
 
@@ -40,16 +40,16 @@ export const ToDoList = () => {
     return dispatch(deleteItem(itemName));
   };
 
-  const [checketItem, setChecketItem] = useState(false);
-  const handleChange = event => {
-    // let listItem = listItems.find(item => item.name == { nameItem });
-    // console.log(listItem);
-    if (event.target.checked) {
-      console.log('✅ Checkbox is checked');
-    } else {
-      console.log('⛔️ Checkbox is NOT checked');
-    }
-  };
+  // const [checketItem, setChecketItem] = useState(false);
+  // const handleChange = event => {
+  //   // let listItem = listItems.find(item => item.name == { nameItem });
+  //   // console.log(listItem);
+  //   if (event.target.checked) {
+  //     console.log('✅ Checkbox is checked');
+  //   } else {
+  //     console.log('⛔️ Checkbox is NOT checked');
+  //   }
+  // };
 
   //   const listItems = JSON.parse(localStorage.getItem('toDoList'));
 
@@ -62,8 +62,12 @@ export const ToDoList = () => {
           <div>
             {listItems.map(item => {
               return (
-                <div className={item.checked ? styles.item : styles.itemUnChecked} key={item}>
-                  <div onClick={() => checkedItems(item.name)}>{item.name}</div>
+                <div className={styles.wrapperItem} key={item}>
+                  <div
+                    className={item.checked ? styles.item : styles.itemUnChecked}
+                    onClick={() => checkedItems(item.name)}>
+                    {item.name}
+                  </div>
                   {/* <input
                     type="checkbox"
                     onChange={handleChange}

@@ -14,7 +14,7 @@ export const toDoListSlice = createSlice({
       const arrayObj = {
         id: 54,
         name: action.payload,
-        checked: false,
+        checked: true,
       };
       // const arrayObj = action.payload;
       state.value.push(arrayObj);
