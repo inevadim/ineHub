@@ -24,15 +24,25 @@ box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
         .name{
             // background-color: aqua;
             overflow: hidden;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            font-size: 25px;
         }
 
         .content{
             // background-color: antiquewhite;
             flex: 1;
-            .wrapperItem{display: flex;}
+            
+            .wrapperItem{
+                display: flex;
+                border-bottom: 1px solid;
+                border-color: rgba(124, 176, 222,0.3);
+                padding-bottom: 5px;
+            }
+
             .editItem{
                 margin-left: 10px;
-
+                cursor: pointer;
                 &:hover{
                     margin-top: -2px;  
                     transition: 0.1s;
@@ -47,15 +57,26 @@ box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
             }
 
             .item{
-                color:green;
+                color:rgb(16, 111, 16);
                 display: flex;
                 cursor: pointer;
+                // background-color: aqua;
+                width: 90%;
+                &:hover{
+                    color:rgb(31, 91, 31);
+                    transition: 0.1s;
+                }
             }
             .itemUnChecked{
-                // color:red;
+                
                 cursor: pointer;
                 text-decoration: line-through;
                 display: flex;
+                width: 90%;
+                &:hover{
+                    color:rgb(72, 75, 72);
+                    transition: 0.1s;
+                }
             }
 
             .deleteItem{

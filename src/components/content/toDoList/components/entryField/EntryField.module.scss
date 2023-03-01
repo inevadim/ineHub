@@ -14,4 +14,24 @@
         margin: 0 auto;
         cursor: pointer;
     }
+
+    .enterButton{
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(106, 74, 223, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+-moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+        color: rgb(58, 58, 58);
+        border-radius: 5px;
+        padding: 5px;
+        width: 65px;
+        display: flex;
+        justify-content: center;
+        &:hover{
+            background-color: rgba(106, 74, 223, 0.15);
+            transition: 0.1s;
+        }
+    }
 }

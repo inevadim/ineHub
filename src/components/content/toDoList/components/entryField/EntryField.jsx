@@ -25,7 +25,7 @@ export const EntryField = () => {
         onClick={() => {
           addItems();
         }}>
-        Enter
+        <div className={styles.enterButton}>Enter</div>
       </div>
       {/* <div
         className={styles.buttonEntryField}
