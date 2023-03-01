@@ -10,17 +10,47 @@
 
     .editItem{
         width: 450px;
-height: 450px;
-position: absolute;
-top: 25%;
-left: 35%;
-backdrop-filter: blur(16px) saturate(180%);
--webkit-backdrop-filter: blur(16px) saturate(180%);
-background-color: rgba(172, 175, 182, 0.25);
-border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+        height: 150px;
+        position: absolute;
+        top: 25%;
+        left: 35%;
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(172, 175, 182, 0.25);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+
+        input{
+            margin-left: 20px;
+            width: 350px;
+        }
+
+        .saveItem{
+            // background-color: rebeccapurple;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            width: 150px;
+            padding: 5px;
+            margin: 0 auto;
+            margin-top: 30px;
+            backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(106, 74, 223, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.125);
     -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
 -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
 box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+
+&:hover{
+    background-color: rgba(106, 74, 223, 0.15);
+    transition: 0.1s;
+}
+
+        }
     }
 }

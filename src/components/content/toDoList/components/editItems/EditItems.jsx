@@ -32,10 +32,10 @@ export const EditItems = () => {
           e.stopPropagation();
         }}>
         <center>
-          <div>EDIT ITEM</div>
+          <div>EDIT</div>
         </center>
         <div onClick={() => console.log({ itemNameChange })}>
-          Name - {valueEdit}{' '}
+          Name
           <input
             defaultValue={valueEdit}
             onChange={e => {
@@ -43,7 +43,9 @@ export const EditItems = () => {
             }}
           />
         </div>
-        <div onClick={() => saveItem()}>SAVE</div>
+        <div className={styles.saveItem} onClick={() => saveItem()}>
+          SAVE
+        </div>
       </div>
     </div>
   );
