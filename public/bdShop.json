@@ -1,0 +1,10 @@
+{
+  "shop_item": [
+    {
+      "id": 1,
+      "name": "Jordan One Paris",
+      "price": 165,
+      "imgUrl": "/assets/img/shop/jordanOneParis.png"
+    }
+  ]
+}
