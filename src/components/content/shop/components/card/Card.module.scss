@@ -11,4 +11,14 @@
     -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
 -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
 box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+
+.imgItem{
+    overflow: hidden;
+    img{
+        border-radius: 12px 12px 0px 0px;
+        width: 100%;
+        height: 100px;
+    }
+    
+}
 }
