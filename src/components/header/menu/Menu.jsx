@@ -6,7 +6,7 @@ export const Menu = () => {
       <ul>
         <li>Home</li>
         <li>To do list</li>
-        <li>3</li>
+        <li>Shop</li>
         <li>4</li>
         <li>5</li>
       </ul>
