@@ -1,0 +1,13 @@
+.wrapper{
+    width: 600px;
+    height: 30px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(172, 175, 182, 0.25);
+    border-radius: 12px;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+-moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+}

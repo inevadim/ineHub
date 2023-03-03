@@ -1,5 +1,7 @@
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Card } from './components/card/Card';
+import { Header } from './components/header/Header';
 import styles from './Shop.module.scss';
 
 export const Shop = () => {
@@ -12,6 +14,8 @@ export const Shop = () => {
   }, [setMas]);
   return (
     <div className={styles.shop}>
+      <Header />
+      {/* <div className={styles.shopContentWrapper}> */}
       <div className={styles.shopContent}>
         {mas.map(item => {
           return (
@@ -21,6 +25,7 @@ export const Shop = () => {
           );
         })}
       </div>
+      {/* </div> */}
     </div>
   );
 };

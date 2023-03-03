@@ -5,6 +5,36 @@
       "name": "Jordan One Paris",
       "price": 165,
       "imgUrl": "/assets/img/shop/jordanOneParis.png"
+    },
+    {
+      "id": 2,
+      "name": "Nike Dunk High Up WMNS",
+      "price": 250,
+      "imgUrl": "/assets/img/shop/nikeDunkHighUpWmns.png"
+    },
+    {
+      "id": 3,
+      "name": "Jordan One Paris",
+      "price": 165,
+      "imgUrl": "/assets/img/shop/jordanOneParis.png"
+    },
+    {
+      "id": 4,
+      "name": "Nike Dunk High Up WMNS",
+      "price": 250,
+      "imgUrl": "/assets/img/shop/nikeDunkHighUpWmns.png"
+    },
+    {
+      "id": 5,
+      "name": "Nike Dunk High Up WMNS",
+      "price": 250,
+      "imgUrl": "/assets/img/shop/nikeDunkHighUpWmns.png"
+    },
+    {
+      "id": 6,
+      "name": "Nike Dunk High Up WMNS",
+      "price": 250,
+      "imgUrl": "/assets/img/shop/nikeDunkHighUpWmns.png"
     }
   ]
 }

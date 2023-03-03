@@ -1,16 +1,21 @@
 .shop{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
 
     .shopContent{
+        overflow: auto;
+        // -ms-overflow-style: none;
+        // scrollbar-width: none;
         margin-top: 30px;
         width: 600px;
         height: 600px;
         justify-items: center;
         // align-items: center;
-        justify-content:space-between;
+        justify-content:space-evenly;
         flex-wrap: wrap;
         display: flex;
         // flex-direction: column;
@@ -24,6 +29,10 @@
     -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
 -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
 box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
-    
+    .shopContentWrapper{
+        width: 500px;
+        height: 500px;
+        background-color: red;
+    }
     }
 }

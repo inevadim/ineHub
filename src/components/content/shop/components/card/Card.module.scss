@@ -1,4 +1,5 @@
 .wrapper{
+    cursor: pointer;
     width: 160px;
     height: 220px;
     // border: 1px solid;
@@ -11,7 +12,10 @@
     -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
 -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
 box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
-
+&:hover{
+    margin-top: -1px;  
+    transition: 0.3s;
+}
 .imgItem{
     overflow: hidden;
     img{
