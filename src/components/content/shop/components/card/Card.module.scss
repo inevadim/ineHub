@@ -1,4 +1,7 @@
 .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     cursor: pointer;
     width: 160px;
     height: 220px;
@@ -13,8 +16,9 @@
 -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
 box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
 &:hover{
-    margin-top: -1px;  
-    transition: 0.3s;
+    // margin-top: -1px;  
+    // transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.40);
 }
 .imgItem{
     overflow: hidden;
@@ -24,5 +28,33 @@ box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
         height: 100px;
     }
     
+}
+
+.buyItem{
+    display: flex;
+    // margin-left: 30px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: grey;
+    cursor: pointer;
+    min-width: 50px;
+    overflow: hidden;
+    padding: 5px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(106, 74, 223, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+-webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+-moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+    
+&:hover{
+    background-color: rgba(74, 223, 124, 0.25);  
+    transition: 0.3s;
+    font-weight: 600;
+}
 }
 }
