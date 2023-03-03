@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Card } from './components/card/Card';
+import { CartShop } from './components/cartShop/CartShop';
 import { Header } from './components/header/Header';
 import styles from './Shop.module.scss';
 
@@ -14,6 +15,7 @@ export const Shop = () => {
   }, [setMas]);
   return (
     <div className={styles.shop}>
+      <CartShop />
       <Header />
       {/* <div className={styles.shopContentWrapper}> */}
       <div className={styles.shopContent}>
