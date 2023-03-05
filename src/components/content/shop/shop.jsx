@@ -4,10 +4,10 @@ import { Card } from './components/card/Card';
 import { CartShop } from './components/cartShop/CartShop';
 import { Header } from './components/header/Header';
 import styles from './Shop.module.scss';
-
+import { useDispatch, useSelector } from 'react-redux';
 export const Shop = () => {
   const [mas, setMas] = useState([]);
-
+  const visibleShop = useSelector(state => state.shop.valueVisible);
   useEffect(() => {
     axios.get('/bdShop.json').then(({ data }) => {
       setMas(data.shop_item);
@@ -15,7 +15,7 @@ export const Shop = () => {
   }, [setMas]);
   return (
     <div className={styles.shop}>
-      <CartShop />
+      {visibleShop ? <CartShop /> : ''}
       <Header />
       {/* <div className={styles.shopContentWrapper}> */}
       <div className={styles.shopContent}>
