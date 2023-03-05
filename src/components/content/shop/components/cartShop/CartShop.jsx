@@ -18,32 +18,37 @@ export const CartShop = () => {
         onClick={e => {
           e.stopPropagation();
         }}>
-        {listItems.map(item => {
-          return (
-            <div className={styles.wrapperItem} key={item.name}>
-              <div className={styles.imgItem}>
-                <img src={item.imgUrl} />
-                {/* <img src="assets/img/shop/nikeDunkHighUpWmns.png" /> */}
+        <div>
+          {listItems.map(item => {
+            return (
+              <div className={styles.wrapperItem} key={item.name}>
+                <div className={styles.imgItem}>
+                  <img src={item.imgUrl} />
+                  {/* <img src="assets/img/shop/nikeDunkHighUpWmns.png" /> */}
+                </div>
+                <div className={styles.wrapperPriceName}>
+                  <div className={styles.itemName}>name: {item.name}</div>
+                  <div className={styles.itemPrice}>price: {item.price} BYN</div>
+                </div>
+                <div className={styles.deleteItem} onClick={() => deleteItems(item.name)}>
+                  ⛔️
+                </div>
               </div>
-              <div className={styles.wrapperPriceName}>
-                <div className={styles.itemName}>name: {item.name}</div>
-                <div className={styles.itemPrice}>price: {item.price} BYN</div>
-              </div>
-              <div className={styles.deleteItem} onClick={() => deleteItems(item.name)}>
-                ⛔️
-              </div>
-            </div>
-          );
-        })}
-        <div className={styles.allPrice}>
-          ALL PRICE :
-          {listItems
-            .map(item => {
-              return item.price;
-            })
-            .reduce((sum, current) => sum + current, 0)}
+            );
+          })}
         </div>
-        <div className={styles.checkout}>Сheckout</div>
+        <div className={styles.wrapperCheckout}>
+          <div className={styles.allPrice}>
+            ALL PRICE :{' '}
+            {listItems
+              .map(item => {
+                return item.price;
+              })
+              .reduce((sum, current) => sum + current, 0)}{' '}
+            BYN
+          </div>
+          <div className={styles.checkout}>Сheckout</div>
+        </div>
       </div>
     </div>
   );
