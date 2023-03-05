@@ -35,7 +35,7 @@ export const CartShop = () => {
             </div>
           );
         })}
-        <div>
+        <div className={styles.allPrice}>
           ALL PRICE :
           {listItems
             .map(item => {
@@ -43,6 +43,7 @@ export const CartShop = () => {
             })
             .reduce((sum, current) => sum + current, 0)}
         </div>
+        <div className={styles.checkout}>Сheckout</div>
       </div>
     </div>
   );
