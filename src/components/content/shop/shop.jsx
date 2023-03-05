@@ -5,6 +5,7 @@ import { CartShop } from './components/cartShop/CartShop';
 import { Header } from './components/header/Header';
 import styles from './Shop.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
+import { addItem } from '../../../redux/shopSlice';
 export const Shop = () => {
   const [mas, setMas] = useState([]);
   const visibleShop = useSelector(state => state.shop.valueVisible);

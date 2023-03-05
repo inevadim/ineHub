@@ -4,20 +4,13 @@ const initialState = {
   value: JSON.parse(localStorage.getItem('shop')) || [],
   valueVisible: false,
   valueEdit: [],
-  valueCrossOut: false,
 };
 export const shopSlice = createSlice({
   name: 'shop',
   initialState,
   reducers: {
     addItem: (state, action) => {
-      const arrayObj = {
-        id: 54,
-        name: action.payload,
-        checked: true,
-      };
-      // const arrayObj = action.payload;
-      state.value.push(arrayObj);
+      state.value.push(action.payload);
       localStorage.setItem('shop', JSON.stringify(state.value));
     },
     deleteItem: (state, action) => {

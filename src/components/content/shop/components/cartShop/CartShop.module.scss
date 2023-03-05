@@ -12,12 +12,56 @@
     // background-color: red;
 
     .content{
+        color:white;
         height: 100vh;
-        width: 300px;
+        width: 400px;
         float: right;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(143, 79, 79, 0.75);
+    // background-color: rgba(143, 79, 79, 0.75);
     // background-color: green;
+
+    .wrapperItem{
+        width: 380px;
+        margin-top: 20px;
+        border-radius: 10px;
+      
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(106, 74, 223, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+        img{
+            border-radius: 10px;
+            // margin-left: 10px;
+            width:140px;
+            height: 100%;
+        }
+        display: flex;
+        
+        .deleteItem{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .wrapperPriceName{
+            // background-color: green;
+            width: 190px;
+            padding: 15px;
+            // display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .itemPrice{
+                margin-top: 15px;
+            }
+        }
+    }
     }
 }
