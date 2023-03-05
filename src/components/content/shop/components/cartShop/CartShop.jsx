@@ -1,6 +1,7 @@
 import styles from './CartShop.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { visibleShop, deleteItem } from '../../../../../redux/shopSlice';
+
 export const CartShop = () => {
   const listItems = useSelector(state => state.shop.value);
   const dispatch = useDispatch();
@@ -34,6 +35,14 @@ export const CartShop = () => {
             </div>
           );
         })}
+        <div>
+          ALL PRICE :
+          {listItems
+            .map(item => {
+              return item.price;
+            })
+            .reduce((sum, current) => sum + current, 0)}
+        </div>
       </div>
     </div>
   );
