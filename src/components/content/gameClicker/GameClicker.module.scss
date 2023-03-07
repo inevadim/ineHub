@@ -1,3 +1,14 @@
+@mixin wrapper {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    // background-color: rgba(172, 175, 182, 0.25);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+-moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+  }
+
 .wrapper{
     display: flex;
     justify-content: center;
@@ -10,98 +21,89 @@
         height: 600px;
         margin-top: 30px;
         display: flex;
-        flex-direction: column;
+        
         padding: 5px;
         // border-radius: 5px;
-        backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(172, 175, 182, 0.25);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
--moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
+        @include wrapper;
 
-        .plusCount{
-            //start non select
-            -webkit-touch-callout: none; 
-    -webkit-user-select: none;   
-    -khtml-user-select: none;   
-    -moz-user-select: none;      
-    -ms-user-select: none;       
-    user-select: none;
-    //end non select           
-            cursor: pointer;
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 70px;
-            padding: 5px;
-        border-radius: 5px;
-        backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
+.wrapperItem{
+    width: 150px;
+    height: 180px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
     background-color: rgba(172, 175, 182, 0.25);
-    // border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
--moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
-        }
+    // border-radius: 5px;
+    @include wrapper;
+    .plusMoney{
+    //start non select
+    -webkit-touch-callout: none; 
+-webkit-user-select: none;   
+-khtml-user-select: none;   
+-moz-user-select: none;      
+-ms-user-select: none;       
+user-select: none;
+//end non select           
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    padding: 5px;
+    @include wrapper;
+border-radius: 5px;
 
-        .lvlUp{
-            //start non select
-            -webkit-touch-callout: none; 
-    -webkit-user-select: none;   
-    -khtml-user-select: none;   
-    -moz-user-select: none;      
-    -ms-user-select: none;       
-    user-select: none;
-    //end non select
-            cursor: pointer;
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 70px;
-            padding: 5px;
-        border-radius: 5px;
-        backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
+background-color: rgba(172, 175, 182, 0.25);
+// border-radius: 12px;
+
+}
+
+.lvlUp{
+    //start non select
+    -webkit-touch-callout: none; 
+-webkit-user-select: none;   
+-khtml-user-select: none;   
+-moz-user-select: none;      
+-ms-user-select: none;       
+user-select: none;
+//end non select
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    padding: 5px;
+    @include wrapper;
+border-radius: 5px;
+
+background-color: rgba(172, 175, 182, 0.25);
+
+}
+
+.autoLvlUp{
+    //start non select
+    -webkit-touch-callout: none; 
+-webkit-user-select: none;   
+-khtml-user-select: none;   
+-moz-user-select: none;      
+-ms-user-select: none;       
+user-select: none;
+//end non select
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    padding: 5px;
+    @include wrapper;
+    border-radius: 5px;
     background-color: rgba(172, 175, 182, 0.25);
-    // border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
--moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
-        }
-
-        .autoLvlUp{
-            //start non select
-            -webkit-touch-callout: none; 
-    -webkit-user-select: none;   
-    -khtml-user-select: none;   
-    -moz-user-select: none;      
-    -ms-user-select: none;       
-    user-select: none;
-    //end non select
-            cursor: pointer;
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 70px;
-            padding: 5px;
-        border-radius: 5px;
-        backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(172, 175, 182, 0.25);
-    // border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
--moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.7);
-        }
-
+}
+}
     }
 }
