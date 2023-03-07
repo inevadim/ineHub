@@ -12,7 +12,9 @@ export const Menu = () => {
         <Link to="/shop">
           <li>Shop</li>
         </Link>
-        <li>4</li>
+        <Link to="/clicker">
+          <li>Clicker</li>
+        </Link>
         <li>5</li>
       </ul>
     </div>
