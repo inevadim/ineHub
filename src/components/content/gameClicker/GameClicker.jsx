@@ -8,6 +8,11 @@ export const GameClicker = () => {
   const plusCountItem = () => {
     setCount(count + plusCount);
   };
+  const lvlUpItem = () => {
+    setPlusCount(plusCount + 1);
+    setCount(count - lvlUp);
+    setLvlUp(lvlUp * 2);
+  };
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
@@ -17,9 +22,15 @@ export const GameClicker = () => {
           onClick={() => {
             plusCountItem();
           }}>
-          + count
+          + {plusCount} count
         </div>
-        <div className={styles.lvlUp}>lvlUp: 10</div>
+        <div
+          className={styles.lvlUp}
+          onClick={() => {
+            lvlUpItem();
+          }}>
+          lvlUp: {lvlUp}
+        </div>
       </div>
     </div>
   );
