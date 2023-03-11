@@ -1,10 +1,24 @@
 import styles from './CartShop.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { visibleShop, deleteItem } from '../../../../../redux/shopSlice';
+import { Checkout } from './Checkout';
+import { useState } from 'react';
 
 export const CartShop = () => {
   const listItems = useSelector(state => state.shop.value);
   const dispatch = useDispatch();
+
+  const [checkoutState, setCheckoutState] = useState(false);
+  const checkout = () => {
+    if (listItems != '') {
+      setCheckoutState(true);
+      // setTimeout(() => {
+      //   setCheckoutState(false);
+      // }, 1000);
+    } else {
+    }
+  };
+
   const deleteItems = itemName => {
     return dispatch(deleteItem(itemName));
   };
@@ -21,7 +35,9 @@ export const CartShop = () => {
         <div>
           {listItems.map(item => {
             return (
-              <div className={styles.wrapperItem} key={item.name}>
+              <div
+                className={checkoutState ? styles.unWrapperItem : styles.wrapperItem}
+                key={item.name}>
                 <div className={styles.imgItem}>
                   <img src={item.imgUrl} />
                   {/* <img src="assets/img/shop/nikeDunkHighUpWmns.png" /> */}
@@ -37,6 +53,7 @@ export const CartShop = () => {
             );
           })}
         </div>
+
         <div className={styles.wrapperCheckout}>
           <div className={styles.allPrice}>
             ALL PRICE :{' '}
@@ -47,7 +64,14 @@ export const CartShop = () => {
               .reduce((sum, current) => sum + current, 0)}{' '}
             BYN
           </div>
-          <div className={styles.checkout}>Сheckout</div>
+          {checkoutState ? <Checkout /> : ''}
+          <div
+            className={styles.checkout}
+            onClick={() => {
+              checkout();
+            }}>
+            Сheckout
+          </div>
         </div>
       </div>
     </div>
