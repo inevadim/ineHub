@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ineHub/static/css/main.25fc7986.css",
-    "main.js": "/ineHub/static/js/main.962c1824.js",
+    "main.js": "/ineHub/static/js/main.2ed97972.js",
     "static/media/back.png": "/ineHub/static/media/back.2a48495f6edc67a94659.png",
     "index.html": "/ineHub/index.html",
     "main.25fc7986.css.map": "/ineHub/static/css/main.25fc7986.css.map",
-    "main.962c1824.js.map": "/ineHub/static/js/main.962c1824.js.map"
+    "main.2ed97972.js.map": "/ineHub/static/js/main.2ed97972.js.map"
   },
   "entrypoints": [
     "static/css/main.25fc7986.css",
-    "static/js/main.962c1824.js"
+    "static/js/main.2ed97972.js"
   ]
 }
