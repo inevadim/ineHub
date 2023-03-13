@@ -15,7 +15,9 @@ export const Menu = () => {
         <Link to="/clicker">
           <li>Clicker</li>
         </Link>
-        <li>5</li>
+        <Link to="/colloquy">
+          <li>Colloquy</li>
+        </Link>
       </ul>
     </div>
   );
